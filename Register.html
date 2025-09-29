@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Join Campus Lost & Found</h1>
+                <p>Help reunite lost items with their owners</p>
+            </div>
+            
+            <form id="registrationForm" class="registration-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" id="firstName" required>
+                        <label for="firstName">First Name</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" id="lastName" required>
+                        <label for="lastName">Last Name</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">University Email</label>
+                    <span class="input-highlight"></span>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="studentId" required>
+                    <label for="studentId">Student/Staff ID</label>
+                    <span class="input-highlight"></span>
+                </div>
+                
+                <div class="input-group">
+                    <select id="department" required>
+                        <option value="" disabled selected></option>
+                        <option value="cs">Computer Science</option>
+                        <option value="eng">Engineering</option>
+                        <option value="bus">Business</option>
+                        <option value="med">Medicine</option>
+                        <option value="arts">Arts & Sciences</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="department">Department</label>
+                    <span class="input-highlight"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="tel" id="phone" required>
+                    <label for="phone">Phone Number</label>
+                    <span class="input-highlight"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <span class="input-highlight"></span>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                    </div>
+                    <span class="password-hint">Use 8+ characters with mixed case and numbers</span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <span class="input-highlight"></span>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Create Account</span>
+                    <div class="btn-loader"></div>
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Sign in</a></p>
+            </div>
+        </div>
+        
+        <div class="illustration-container">
+            <div class="floating-items">
+                <div class="item item-1">📱</div>
+                <div class="item item-2">🎒</div>
+                <div class="item item-3">💻</div>
+                <div class="item item-4">🔑</div>
+                <div class="item item-5">📚</div>
+            </div>
+            <h2>Never Lose Hope</h2>
+            <p>Connect with your campus community to find lost items quickly</p>
+        </div>
+    </div>
+</body>
+<script src="register.js"></script>
+</html>

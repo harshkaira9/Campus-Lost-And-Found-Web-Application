@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Campus Lost & Found</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="browse.html">Browse Items</a></li>
+                    <li class="nav-item"><a class="nav-link" href="report-lost.html">Report Lost</a></li>
+                    <li class="nav-item"><a class="nav-link" href="report-found.html">Report Found</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="messages.html">Messages</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Your Messages</h2>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Re: Your Lost Water Bottle</h5>
+                    <small>2 days ago</small>
+                </div>
+                <p class="mb-1">Hi, I think I found your water bottle in the gym. Can you describe it further?</p>
+                <small>From: finder@campus.edu</small>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Claim Approved: Calculator</h5>
+                    <small>1 week ago</small>
+                </div>
+                <p class="mb-1">Your claim for the Casio calculator has been approved. Please pick it up at Admin Office B12.</p>
+                <small>From: system@campus.edu</small>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Someone Claimed Your Backpack</h5>
+                    <small>3 days ago</small>
+                </div>
+                <p class="mb-1">A student claims to be the owner of the black backpack you found. View details and verify.</p>
+                <small>From: system@campus.edu</small>
+            </a>
+        </div>
+
+        <div class="mt-4">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#composeModal">Compose Message</button>
+        </div>
+    </div>
+
+    <!-- Compose Message Modal -->
+    <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composeModalLabel">Compose Message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="messageForm">
+                        <div class="mb-3">
+                            <label for="recipient" class="form-label">To</label>
+                            <input type="email" class="form-control" id="recipient" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-body" class="form-label">Message</label>
+                            <textarea class="form-control" id="message-body" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p>&copy; 2025 Campus Lost & Found System. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sendMessage() {
+            alert('Message sent successfully!');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('composeModal'));
+            modal.hide();
+            // In real app: submit via AJAX to backend
+        }
+    </script>
+</body>
+</html>

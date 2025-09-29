@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🔍</span>
+                <span class="brand-text">Campus Lost & Found</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#" class="nav-link active">Dashboard</a>
+                <a href="report-lost.html" class="nav-link">Report Lost</a>
+                <a href="report-found.html" class="nav-link">Report Found</a>
+                <a href="browse.html" class="nav-link">Browse Items</a>
+            </div>
+            
+            <div class="nav-user">
+                <div class="notifications">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                    <span class="user-name">John Doe</span>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="dashboard-content">
+        <div class="welcome-section">
+            <h1>Welcome back, John!</h1>
+            <p>Here's what's happening with your lost and found items</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon lost">📍</div>
+                <div class="stat-info">
+                    <h3>Lost Items</h3>
+                    <p class="stat-number">3</p>
+                    <span class="stat-label">Active Reports</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon found">✅</div>
+                <div class="stat-info">
+                    <h3>Found Items</h3>
+                    <p class="stat-number">2</p>
+                    <span class="stat-label">Items Returned</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon pending">⏳</div>
+                <div class="stat-info">
+                    <h3>Pending</h3>
+                    <p class="stat-number">1</p>
+                    <span class="stat-label">Awaiting Pickup</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon messages">💬</div>
+                <div class="stat-info">
+                    <h3>Messages</h3>
+                    <p class="stat-number">5</p>
+                    <span class="stat-label">Unread Messages</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="recent-items">
+                <h2>Your Recent Reports</h2>
+                <div class="items-list">
+                                        <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/100" alt="Lost Item">
+                            <span class="item-status lost">Lost</span>
+                        </div>
+                        <div class="item-details">
+                            <h4>Black Backpack</h4>
+                            <p class="item-location">📍 Library - 2nd Floor</p>
+                            <p class="item-date">🕒 2 hours ago</p>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/100" alt="Lost Item">
+                            <span class="item-status found">Found</span>
+                        </div>
+                        <div class="item-details">
+                            <h4>Student ID Card</h4>
+                            <p class="item-location">📍 Cafeteria</p>
+                            <p class="item-date">🕒 Yesterday</p>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-card">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/100" alt="Lost Item">
+                            <span class="item-status lost">Lost</span>
+                        </div>
+                        <div class="item-details">
+                            <h4>iPhone 13 Pro</h4>
+                            <p class="item-location">📍 Sports Complex</p>
+                            <p class="item-date">🕒 3 days ago</p>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="browse.html" class="view-all-link">View All Reports →</a>
+            </div>
+            
+            <div class="activity-feed">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon match">🎯</div>
+                        <div class="activity-content">
+                            <p><strong>Potential match found!</strong></p>
+                            <p>Your lost "Black Backpack" might have been found</p>
+                            <span class="activity-time">10 minutes ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon message">💬</div>
+                        <div class="activity-content">
+                            <p><strong>New message</strong></p>
+                            <p>Sarah commented on your found item report</p>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon update">📝</div>
+                        <div class="activity-content">
+                            <p><strong>Status updated</strong></p>
+                            <p>Your report "Wallet" has been marked as resolved</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-buttons">
+                <a href="report-lost.html" class="action-btn lost">
+                    <span class="action-icon">📍</span>
+                    <span>Report Lost Item</span>
+                </a>
+                <a href="report-found.html" class="action-btn found">
+                    <span class="action-icon">🔍</span>
+                    <span>Report Found Item</span>
+                </a>
+                <a href="browse.html" class="action-btn browse">
+                    <span class="action-icon">📋</span>
+                    <span>Browse All Items</span>
+                </a>
+                <a href="messages.html" class="action-btn messages">
+                    <span class="action-icon">💬</span>
+                    <span>View Messages</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="dashboard-footer">
+        <p>&copy; 2025 Campus Lost & Found. All rights reserved.</p>
+    </footer>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
