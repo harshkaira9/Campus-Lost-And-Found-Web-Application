@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Particles Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo Section -->
+            <div class="login-header">
+                <div class="logo">
+                    <span class="logo-icon">🔍</span>
+                    <span class="logo-text">Lost & Found</span>
+                </div>
+                <p class="login-subtitle">Sign in to continue to Campus Lost & Found</p>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+                <span>Invalid email or password</span>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <span>Login successful! Redirecting...</span>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form">
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="input-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input" 
+                            placeholder="Enter your email"
+                            required
+                            autocomplete="email"
+                        >
+                        <span class="input-icon">📧</span>
+                    </div>
+                </div>
+                
+                <!-- Password Input -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="form-input" 
+                            placeholder="Enter your password"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <span class="input-icon">🔒</span>
+                        <button 
+                            type="button" 
+                            class="toggle-password" 
+                            id="togglePassword"
+                            aria-label="Toggle password visibility"
+                        >👁️</button>
+                    </div>
+                    
+                    <!-- Password Strength Indicator -->
+                    <div class="password-strength" id="passwordStrength">
+                        <div class="strength-bar-container">
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                        </div>
+                        <div class="strength-text"></div>
+                    </div>
+                </div>
+                
+                <!-- Form Options -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span>Sign In</span>
+                </button>
+            </form>
+            
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            
+            <!-- Social Login -->
+            <div class="social-login">
+                <button type="button" class="btn-social" id="googleLogin">
+                    <span class="social-icon">🔵</span>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="btn-social" id="microsoftLogin">
+                    <span class="social-icon">🪟</span>
+                    <span>Microsoft</span>
+                </button>
+            </div>
+            
+            <!-- Sign Up Link -->
+            <div class="signup-link">
+                <p>Don't have an account? <a href="register.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
